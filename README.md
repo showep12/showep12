@@ -21,5 +21,5 @@ Java · Spring Boot · SQL/PL-SQL (Oracle, PostgreSQL) · C# / .NET · TypeScrip
 ## Links
 
 - Case studies: [daeseon.ai](https://www.daeseon.ai)
-- LinkedIn: [add your URL]
+- LinkedIn: https://www.linkedin.com/in/daeseonyoo/ 
 - Email: showep12@gmail.com
