@@ -1,16 +1,25 @@
-## Hi there 👋
+# Dae-Seon Yoo
 
-<!--
-**showep12/showep12** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Backend engineer in Toronto. Six years building and modernizing production systems — mostly Java/Spring and SQL/PL-SQL across manufacturing, warehouse, and finance domains. I work closest to the data and transaction layer: API design, transaction boundaries, and concurrency/reliability across multi-server systems. Lately I've been building Spring services and small products that use LLMs.
 
-Here are some ideas to get you started:
+## Projects
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**[TubeShadow](https://github.com/Daeseon-AI-Factory/shadow-ai)** — a YouTube-clip language shadowing trainer.
+Spring Boot · Next.js · PostgreSQL · AWS
+
+The core piece is an async, event-driven LLM analysis pipeline: provider calls run *outside* the DB transaction (Spring `AFTER_COMMIT` + `@Async`) so a multi-second LLM call never holds a connection, with a `PENDING → READY / FAILED` state machine and a runtime-selectable Claude/Gemini provider interface.
+
+**[Dalkkak](https://github.com/Daeseon-AI-Factory/ddalkkak)** — a multi-pane macOS terminal for running AI coding agents.
+Rust · Tauri · React · tmux
+
+Each pane is a PTY backed by its own tmux session, so terminal sessions survive app restarts and React remounts.
+
+## Tech
+
+Java · Spring Boot · SQL/PL-SQL (Oracle, PostgreSQL) · C# / .NET · TypeScript · React / Next.js · Rust · AWS · Docker · Linux
+
+## Links
+
+- Case studies: [daeseon.ai](https://www.daeseon.ai)
+- LinkedIn: [add your URL]
+- Email: showep12@gmail.com
