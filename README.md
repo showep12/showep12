@@ -1,25 +1,32 @@
-# Dae-Seon Yoo
+# Daeseon Yoo
 
-Backend engineer in Toronto. Six years building and modernizing production systems — mostly Java/Spring and SQL/PL-SQL across manufacturing, warehouse, and finance domains. I work closest to the data and transaction layer: API design, transaction boundaries, and concurrency/reliability across multi-server systems. Lately I've been building Spring services and small products that use LLMs.
+Backend engineer in Toronto, 6 years in production Java/Spring and SQL/PL-SQL across manufacturing, warehouse, and finance. Now building AI products end to end — LLM pipelines, RAG, agent loops, and vision — on top of that backend foundation.
 
-## Projects
+I ship the boring parts that AI features need in production: transactions, migrations, CI/CD, audit trails.
 
-**[TubeShadow](https://github.com/Daeseon-AI-Factory/shadow-ai)** — a YouTube-clip language shadowing trainer.
-Spring Boot · Next.js · PostgreSQL · AWS
+## Selected work
 
-The core piece is an async, event-driven LLM analysis pipeline: provider calls run *outside* the DB transaction (Spring `AFTER_COMMIT` + `@Async`) so a multi-second LLM call never holds a connection, with a `PENDING → READY / FAILED` state machine and a runtime-selectable Claude/Gemini provider interface.
+| Project | What it does | Stack | Links |
+|---|---|---|---|
+| **Mimi** | YouTube → SRS English shadowing app. Transaction-safe async LLM pipeline with env-gated Gemini/Claude swap. 8 bounded contexts, 11 tables, 14 Playwright e2e, 292 commits. | Java 21 / Spring Boot, Next.js/TS, PostgreSQL, AWS ECS | [live](https://mimi.daeseon.ai) · [repo](https://github.com/Daeseon-AI-Factory/shadow-ai) |
+| **DocVault** | Self-hosted insider-threat event collector. DB-trigger hash-chain tamper-evident audit log, operator AI assistant. 96 commits. | Go 1.26, PostgreSQL 16, htmx, osquery, AES-256-GCM | [live](https://docvault.daeseon.ai) · [repo](https://github.com/Daeseon-AI-Factory/docvault) |
+| **ScreenBridge** | Translates abstract AI instructions into concrete screen pointer actions. Includes a Tauri→Swift migration retro. | Swift 6, ScreenCaptureKit, AXUIElement, Claude Sonnet vision | [repo](https://github.com/Daeseon-AI-Factory/jarvis-pc) |
+| **Beside (곁)** | Private support-box PWA; one codebase scales zero-account-local → full prod by env var. | Next.js 16, Web Push, Drizzle, S3/R2, Terraform | [live](https://beside.daeseon.ai) |
+| **DalkkakAI** | Native macOS multi-pane terminal command deck for solo founders running BYO Claude Code/Codex. | Tauri 2 / Rust, React 19, xterm.js, tmux | [live](https://ddalkkak.daeseon.ai) |
 
-**[Dalkkak](https://github.com/Daeseon-AI-Factory/ddalkkak)** — a multi-pane macOS terminal for running AI coding agents.
-Rust · Tauri · React · tmux
+**What this isn't:** most of these are solo MVPs, not battle-tested-at-scale services. No team-of-50 traffic numbers here — the production-scale retros live in the blog below, from prior backend roles.
 
-Each pane is a PTY backed by its own tmux session, so terminal sessions survive app restarts and React remounts.
+## Writing
+
+I write at **[daeseon.ai](https://daeseon.ai)** (12 EN / 12 KO posts) — production war-story retros and concept write-ups, not motivational threads. A couple:
+
+- *A SELECT That Stopped a Factory* — a query that took down a production line
+- *You Can't Enforce What You Can't Observe* — concept write-up, multi-register
 
 ## Tech
 
-Java · Spring Boot · SQL/PL-SQL (Oracle, PostgreSQL) · C# / .NET · TypeScript · React / Next.js · Rust · AWS · Docker · Linux
+Java/Spring · Go · TypeScript/Next.js · Swift · Rust/Tauri · PostgreSQL · AWS
 
-## Links
+## Contact
 
-- Case studies: [daeseon.ai](https://www.daeseon.ai)
-- LinkedIn: https://www.linkedin.com/in/daeseonyoo/ 
-- Email: showep12@gmail.com
+Toronto, Canada · [showep12@gmail.com](mailto:showep12@gmail.com) · [daeseon.ai](https://daeseon.ai)
