@@ -12,7 +12,7 @@ I ship the boring parts that AI features need in production: transactions, migra
 | **DocVault** | Self-hosted insider-threat event collector. DB-trigger hash-chain tamper-evident audit log, operator AI assistant. 96 commits. | Go 1.26, PostgreSQL 16, htmx, osquery, AES-256-GCM | [live](https://docvault.daeseon.ai) · [repo](https://github.com/Daeseon-AI-Factory/docvault) |
 | **ScreenBridge** | Translates abstract AI instructions into concrete screen pointer actions. Includes a Tauri→Swift migration retro. | Swift 6, ScreenCaptureKit, AXUIElement, Claude Sonnet vision | [repo](https://github.com/Daeseon-AI-Factory/jarvis-pc) |
 | **Beside (곁)** | Private support-box PWA; one codebase scales zero-account-local → full prod by env var. | Next.js 16, Web Push, Drizzle, S3/R2, Terraform | [live](https://beside.daeseon.ai) |
-| **DalkkakAI** | Native macOS multi-pane terminal command deck for solo founders running BYO Claude Code/Codex. | Tauri 2 / Rust, React 19, xterm.js, tmux | [live](https://ddalkkak.daeseon.ai) |
+| **Talkak** | Native macOS multi-pane terminal command deck for solo founders running BYO Claude Code/Codex. | Tauri 2 / Rust, React 19, xterm.js, tmux | [live](https://talkak.daeseon.ai) |
 
 **What this isn't:** most of these are solo MVPs, not battle-tested-at-scale services. No team-of-50 traffic numbers here — the production-scale retros live in the blog below, from prior backend roles.
 
